@@ -1,4 +1,7 @@
-import orjson as json
+try:
+    import orjson as json
+except ImportError as e:
+    import json
 from http.server import BaseHTTPRequestHandler
 import cgi
 from decorator.url import URLS
